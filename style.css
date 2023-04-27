@@ -1,0 +1,66 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-inline: 1.5rem;
+	height: 3rem;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: calc(100vh - 6rem);
+	background-color: #7FFFD4;
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	padding-inline: 1.5rem;
+	height: 3rem;
+}
+
+.grid {
+	--sideSquare: 10;
+	display: flex;
+	flex-wrap: wrap;
+	width: 600px;
+	height: 600px;
+	border: 1px solid black;
+	box-sizing: content-box;
+}
+
+.cell {
+	width: calc(100% / var(--sideSquare));
+	height: calc(100% / var(--sideSquare));
+	flex-grow: 0;
+	flex-shrink: 0;
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.clicked {
+	background-color: blue;
+}
+
+.mine {
+	background-color: red;
+}
+
+.mine-helper {
+	color: red;
+}
+
+.hidden {
+	display: none;
+}
